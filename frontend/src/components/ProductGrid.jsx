@@ -63,10 +63,10 @@ const ProductGrid = ({ onCartUpdate }) => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Notification Toast */}
       {notification && (
-  <div className={`fixed top-32 right-4 z-[150] px-6 py-4 rounded-xl shadow-2xl transform transition-all duration-300 animate-slide-in ${
+  <div className={`fixed top-32 right-4 z-150 px-6 py-4 rounded-xl shadow-2xl transform transition-all duration-300 animate-slide-in ${
     notification.type === 'success' 
-      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' 
-      : 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
+      ? 'bg-linear-to-r from-green-500 to-emerald-500 text-white' 
+      : 'bg-linear-to-r from-red-500 to-pink-500 text-white'
   }`}>
     <div className="flex items-center gap-3">
       <span className="text-xl font-bold">{notification.message}</span>
@@ -80,7 +80,7 @@ const ProductGrid = ({ onCartUpdate }) => {
           Discover Our Collection
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Premium quality products handpicked just for you. Free shipping on orders over $50!
+          Premium quality products handpicked just for you. Free shipping on orders over ₹5000!
         </p>
         <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
           <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">

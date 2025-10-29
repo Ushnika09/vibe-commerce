@@ -14,16 +14,16 @@ const Navbar = ({ cartItemCount }) => {
 
   return (
     <>
-      {/* 🌈 MAIN NAVBAR */}
-      <nav className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white sticky top-0 z-[100] shadow-2xl">
+      {/* Navbar */}
+      <nav className="bg-linear-to-r from-slate-900 via-blue-900 to-slate-900 text-white sticky top-0 z-100 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
 
-            {/* 🛍️ Logo */}
+            {/*  Logo */}
             <Link to="/" className="flex items-center gap-3 group cursor-pointer">
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-500 rounded-xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-xl transform group-hover:scale-110 group-hover:rotate-6 transition-all">
+                <div className="relative bg-linear-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-xl transform group-hover:scale-110 group-hover:rotate-6 transition-all">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -49,13 +49,13 @@ const Navbar = ({ cartItemCount }) => {
               </div>
             </Link>
 
-            {/* 🧭 Desktop Menu */}
+            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 text-lg font-semibold">
               <Link to="/" className={isActive('/')}>Home</Link>
               <Link to="/cart" className={isActive('/cart')}>Cart</Link>
             </div>
 
-            {/* 🛒 Cart Icon */}
+            {/* Cart Icon */}
             <Link
               to="/cart"
               className="relative group transform hover:scale-110 transition-transform"
@@ -80,7 +80,7 @@ const Navbar = ({ cartItemCount }) => {
               )}
             </Link>
 
-            {/* 📱 Mobile Menu Button */}
+            {/* Mobile Menu Button */}
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
@@ -100,7 +100,7 @@ const Navbar = ({ cartItemCount }) => {
           </div>
         </div>
 
-        {/* 📱 Mobile Menu Items */}
+        {/*  Mobile Menu Items */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-slate-800 border-t border-slate-700">
             <div className="px-4 py-3 space-y-3 text-lg">
@@ -115,8 +115,8 @@ const Navbar = ({ cartItemCount }) => {
         )}
       </nav>
 
-      {/* 💎 Feature Banner (No Slider) */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-3 shadow-xl sticky top-20 z-[90]">
+      {/*  Feature Banner  */}
+      <div className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-3 shadow-xl sticky top-20 z-90">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 text-sm sm:text-base font-semibold">
             {/* Feature 1 */}
@@ -126,7 +126,7 @@ const Navbar = ({ cartItemCount }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span>Free Shipping Over $50</span>
+              <span>Free Shipping Over ₹5000!</span>
             </div>
 
             {/* Feature 2 */}

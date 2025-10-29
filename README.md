@@ -1,4 +1,6 @@
 # Vibe Commerce - Full Stack Shopping Cart
+### Video Link
+![Loom link](https://www.loom.com/share/8c29bd1e62ae481cb10d77704a99f90b)
 
 ## 🚀 Features
 
@@ -23,40 +25,13 @@
 - MongoDB with Mongoose
 - CORS enabled
 
-## 📦 API Endpoints
-
-### Products
-```bash
-GET    /api/products          # Get all products
-GET    /api/products/:id      # Get single product
-```
-
-### Cart
-```bash
-GET    /api/cart              # Get cart contents
-POST   /api/cart              # Add item to cart
-PUT    /api/cart/:id          # Update item quantity
-DELETE /api/cart/:id          # Remove item from cart
-DELETE /api/cart              # Clear entire cart
-```
-
-### Checkout
-```bash
-POST   /api/checkout          # Process order and generate receipt
-```
-
 ## 🏃‍♂️ Quick Start
-
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (local or Atlas)
-- npm or yarn
 
 ### Installation
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Ushnika09/vibe-commerce.git
 cd vibe-commerce
 ```
 
@@ -70,8 +45,8 @@ npm install
 Create `.env` file in backend directory:
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/vibe-commerce
 NODE_ENV=development
+MONGO_URI=mongodb+srv://karushnika_db_user:4mYuy0xxvSrFCDZ8@cluster0.dxwl6su.mongodb.net/
 ```
 
 4. **Start Backend Server**
@@ -93,34 +68,47 @@ Frontend will run on http://localhost:3000
 ```
 vibe-commerce/
 ├── backend/
-│   ├── controllers/
-│   │   ├── cartController.js
-│   │   ├── checkoutController.js
-│   │   └── productController.js
-│   ├── models/
-│   │   ├── Cart.js
-│   │   ├── Order.js
-│   │   └── Product.js
-│   ├── routes/
-│   │   ├── cartRoutes.js
-│   │   ├── checkoutRoutes.js
-│   │   └── productRoutes.js
-│   └── server.js
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── cartController.js
+│   │   │   ├── checkoutController.js
+│   │   │   └── productController.js
+│   │   ├── models/
+│   │   │   ├── Cart.js
+│   │   │   ├── Order.js
+│   │   │   └── Product.js
+│   │   ├── routes/
+│   │   │   ├── cartRoutes.js
+│   │   │   ├── checkoutRoutes.js
+│   │   │   └── productRoutes.js
+│   │   ├── config/
+│   │   │   └── db.js
+│   │   └── server.js
+│   ├── package.json
+│   └── .env
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Cart.jsx
 │   │   │   ├── CheckoutForm.jsx
+│   │   │   ├── ErrorMessage.jsx
+│   │   │   ├── LoadingSpinner.jsx
 │   │   │   ├── Navbar.jsx
 │   │   │   ├── ProductCard.jsx
-│   │   │   └── LoadingSpinner.jsx
+│   │   │   └── ProductGrid.jsx
 │   │   ├── pages/
-│   │   │   ├── Home.jsx
 │   │   │   ├── CartPage.jsx
-│   │   │   └── CheckoutPage.jsx
+│   │   │   ├── CheckoutPage.jsx
+│   │   │   └── Home.jsx
 │   │   ├── services/
 │   │   │   └── api.js
-│   │   └── App.jsx
+│   │   ├── utils/
+│   │   │   └── helpers.js
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
 │   └── package.json
 └── README.md
 ```
@@ -157,66 +145,16 @@ vibe-commerce/
 
 ## 📱 Screenshots
 
-*(Add your screenshots here)*
-- Home page with product grid
-- Shopping cart with items
-- Checkout form
-- Order confirmation
+### Home Page
+![Home Page](./Screenshots/Home.png)
 
-## 🚀 Deployment
+### Shopping Cart
+![Shopping Cart](./Screenshots/Cart.png)
 
-### Backend Deployment
-```bash
-# Deploy to Heroku, Railway, or similar
-# Set environment variables for production
-```
+### Checkout Form
+![Checkout Form](./Screenshots/Checkout.png)
 
-### Frontend Deployment  
-```bash
-# Deploy to Netlify, Vercel, or similar
-# Update API base URL for production
-```
+### Order Confirmation
+![Order Confirmation](./Screenshots/OrderConfirmed.png)
 
-## 🧪 Testing
 
-Test the application by:
-1. Adding multiple products to cart
-2. Updating quantities in cart
-3. Removing items from cart
-4. Completing checkout process
-5. Verifying cart clears after order
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch
-```bash
-git checkout -b feature/amazing-feature
-```
-3. Commit changes
-```bash
-git commit -m 'Add amazing feature'
-```
-4. Push to branch
-```bash
-git push origin feature/amazing-feature
-```
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👥 Authors
-
-- Your Name - Initial work
-
-## 🙏 Acknowledgments
-
-- React team for amazing framework
-- Tailwind CSS for utility-first CSS
-- MongoDB for flexible database solution
-
----
-
-**Note**: This is a mock e-commerce application for demonstration purposes. No real payments are processed.

@@ -38,7 +38,7 @@ const CheckoutPage = ({ onCartUpdate }) => {
             <h3 className="font-semibold text-lg mb-4">Order Details</h3>
             <div className="space-y-2">
               <p><span className="font-medium">Order Number:</span> {order.order.orderNumber}</p>
-              <p><span className="font-medium">Total:</span> ${order.order.totalAmount.toFixed(2)}</p>
+              <p><span className="font-medium">Total:</span> ₹{(order.order.totalAmount * 80).toFixed(2)}</p>
               <p><span className="font-medium">Email:</span> {order.order.customerEmail}</p>
               <p><span className="font-medium">Date:</span> {new Date(order.order.createdAt).toLocaleString()}</p>
             </div>
@@ -46,7 +46,7 @@ const CheckoutPage = ({ onCartUpdate }) => {
           
           <button
             onClick={handleContinueShopping}
-            className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white py-3 px-8 rounded-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Continue Shopping
           </button>
