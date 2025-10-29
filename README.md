@@ -1,6 +1,10 @@
 # Vibe Commerce - Full Stack Shopping Cart
-### Video Link
-![Loom link](https://www.loom.com/share/8c29bd1e62ae481cb10d77704a99f90b)
+
+### 🎥 Demo Video
+
+[Watch Demo on Loom](https://www.loom.com/share/8c29bd1e62ae481cb10d77704a99f90b)
+
+*Full walkthrough of the shopping cart functionality*
 
 ## 🚀 Features
 
